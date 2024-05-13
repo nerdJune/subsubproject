@@ -1,0 +1,22 @@
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+#  datasource:
+#    main:
+#      master:
+#        driver-class-name: com.mysql.cj.jdbc.Driver
+#        url: jdbc:mysql://localhost:3306/jhahn?characterEncoding=UTF-8&useSSL=false&allowPublicKeyRetrieval=true
+#        username: root
+#        password: 1234
+    h2:
+      console:
+        enabled: false
+
+#cors:
+#  allowedOriginPatterns: "*"
+#  allowed-methods: GET,POST,PUT,DELETE,OPTIONS
+#  allowed-headers: "*"
+#  allowCredentials: true
+#  max-age: 3600
