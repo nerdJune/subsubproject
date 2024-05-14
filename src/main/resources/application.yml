@@ -3,17 +3,36 @@ spring:
     view:
       prefix: /WEB-INF/views/
       suffix: .jsp
-#  datasource:
-#    main:
-#      master:
-#        driver-class-name: com.mysql.cj.jdbc.Driver
-#        url: jdbc:mysql://localhost:3306/jhahn?characterEncoding=UTF-8&useSSL=false&allowPublicKeyRetrieval=true
-#        username: root
-#        password: 1234
+  datasource:
+    main:
+      master:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/event?characterEncoding=UTF-8&useSSL=false&allowPublicKeyRetrieval=true
+        username: root
+        password: 1234
     h2:
       console:
         enabled: false
-
+  data:
+    jpa:
+      repositories:
+        enabled: true
+      database: mysql
+      database-platform: org.hibernate.dialect.MySQL8Dialect
+      generate-ddl: false
+      show-sql: true
+      hibernate:
+        use-new-id-generator-mappings: false
+        ddl-auto: none
+      properties:
+        hibernate:
+          format_sql: true
+          allow_update_outside_transaction: true
+          default_batch_fetch_size: 1000
+          query:
+            in_clause_parameter_padding: true
+          jdbc:
+            batch_size: 100
 #cors:
 #  allowedOriginPatterns: "*"
 #  allowed-methods: GET,POST,PUT,DELETE,OPTIONS
