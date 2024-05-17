@@ -13,6 +13,16 @@ public class MainController {
         return "home";
     }
 
+    @GetMapping("/kb")
+    public String kb() {
+        return "kb";
+    }
+
+    @GetMapping("/sh")
+    public String sh() {
+        return "sh";
+    }
+
     @GetMapping("/policy")
     public String policy() {
         return "/policy/policy";

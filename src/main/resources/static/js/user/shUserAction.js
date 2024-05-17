@@ -2,15 +2,13 @@
 $(function(){
     $("#submitBtn").on("click", function(e) {
         e.preventDefault();
-
-
-
+        alert("sh success");
         $.ajax({
             type : "post",
-            url : "/kbSave",
+            url : "/shSave",
             dataType : "json",
             success: function(res) {
-                alert("success");
+                alert("sh success");
 
             },
             error: function(err) {
@@ -19,3 +17,7 @@ $(function(){
         })
     })
 });
+
+function createUrl(type) {
+
+}
